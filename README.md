@@ -18,7 +18,8 @@ This project allows a user to dynamically display tasks from the given initial d
 ## Set-up Insteruction 🚧
 - Visual Studio Code with the live server and prettier extension.
 - A browser that supports live server: Chrome, Mozilla, Safari and Explorer.
-- 
+- Node.js is needed to run the project outside the browser.
+
 ## Interaction instructions 🔭
 - Refresh the page to start fresh.
 - Click on any task to see the pop-up.
@@ -30,7 +31,8 @@ This project allows a user to dynamically display tasks from the given initial d
 
 ## Acknowledgments 🧑‍🤝‍🧑
 This project was completed by Mmakgadi Bonolo Letsela for JSL04.
-Contact Details ☎️
+
+## Contact Details ☎️
 LinkedIn: www.linkedin.com/in/mmakgadi-letsela  
 Email: mmakgadi.letsela@gmail.com
 
