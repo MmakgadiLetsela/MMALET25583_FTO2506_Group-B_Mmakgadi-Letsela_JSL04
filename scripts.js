@@ -69,7 +69,7 @@ function clearTasks() {
 } 
 // removes existing tasks before rendering new ones
 function openModal(taskId) {
-  const task = tasks.find(t => t.id === taskId);
+  const task = initialTasks.find(t => t.id === taskId);
   if (!task) return;
 
   document.getElementById("task-title").value = task.title;
@@ -83,6 +83,23 @@ function openModal(taskId) {
 function closeModal() {
   document.getElementById("modal").classList.add("hidden");
 } // Closes the modal
+
+function createTaskElement(task) {
+  const taskDiv = document.createElement("div");
+  taskDiv.className = "task";
+  taskDiv.textContent = task.title;
+  taskDiv.dataset.id = task.id;
+  taskDiv.addEventListener("click", () => openModal(task.id));
+  return taskDiv;
+}
+function renderTasks() {
+  clearTasks();
+  initialTasks.forEach(task => {
+    const column = document.getElementById(task.status);
+    if (column) column.appendChild(createTaskElement(task));
+  });
+}
+// Renders tasks into their respective columns based on status
 
 
 
