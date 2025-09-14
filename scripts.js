@@ -64,6 +64,13 @@ function createModal(){
   document.getElementById("close-button").addEventListener("click", closeModal);
 }
 
+function clearTasks() {
+  document.querySelectorAll(".task-div"),forEach(taskDiv => taskDiv.innerHTML = "");
+} 
+// removes existing tasks before rendering new ones
+
+
+
 
 
 
