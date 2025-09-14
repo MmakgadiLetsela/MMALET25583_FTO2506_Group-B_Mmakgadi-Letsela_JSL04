@@ -76,12 +76,12 @@ function openModal(taskId) {
   document.getElementById("task-desc").value = task.description;
   document.getElementById("task-status").value = task.status;
 
-  document.getElementById("modal").classList.remove("hidden");
+  document.getElementById("taskModal").classList.remove("hidden");
   document.getElementById("save-btn").onclick = () => saveTask(taskId);
 } // Opens modal and populates with task data
 
 function closeModal() {
-  document.getElementById("modal").classList.add("hidden");
+  document.getElementById("taskModal").classList.add("hidden");
 } // Closes the modal
 
 function createTaskElement(task) {
@@ -102,6 +102,10 @@ function renderTasks() {
 // Renders tasks into their respective columns based on status
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  createModal();
+  renderTasks();
+}); // Initialize modal and render tasks on page load
 
 
 
